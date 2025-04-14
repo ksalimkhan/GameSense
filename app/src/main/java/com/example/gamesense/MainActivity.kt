@@ -34,6 +34,12 @@ fun CombinedScreen() {
         // Place the search bar in the top-left corner.
         Box(modifier = androidx.compose.ui.Modifier.align(Alignment.TopStart)) {
             SearchBarWithDropDown()                  // Call the search bar composable from SearchBar.kt.
+        
+        }
+        // Place the leaderboard screen in the top-right corner.
+        Box(modifier = androidx.compose.ui.Modifier.align(Alignment.TopEnd)) {
+            LeaderboardScreen()                      // Call the leaderboard screen composable from Leaderboard.kt.
+            
         }
     }
 }
