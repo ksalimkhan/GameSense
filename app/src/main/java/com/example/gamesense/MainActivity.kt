@@ -1,3 +1,4 @@
+//Declare the package for the main activity
 package com.example.gamesense
 
 // Import Android OS and activity classes.
@@ -30,10 +31,15 @@ class MainActivity : ComponentActivity() {          // MainActivity, the app's e
 fun CombinedScreen() {
     // Use a Box to overlay multiple components, allowing us to position them in different corners.
     Box(modifier = androidx.compose.ui.Modifier.fillMaxSize()) {
-
+        // Place the search bar in the top-left corner.
+        Box(modifier = androidx.compose.ui.Modifier.align(Alignment.TopStart)) {
+            SearchBarWithDropDown()                  // Call the search bar composable from SearchBar.kt.
+        
+        }
         // Place the leaderboard screen in the top-right corner.
         Box(modifier = androidx.compose.ui.Modifier.align(Alignment.TopEnd)) {
             LeaderboardScreen()                      // Call the leaderboard screen composable from Leaderboard.kt.
+            
         }
     }
 }
