@@ -1,4 +1,4 @@
-//declare the package
+//declare the package.
 package com.example.gamesense
 
 //Import animation functions for horizontal sliding effects
